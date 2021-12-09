@@ -5,7 +5,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "client",
+  name: "todolist",
   products: [],
   targets: []
 )

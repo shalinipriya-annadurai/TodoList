@@ -6,11 +6,21 @@
 //
 
 import SwiftUI
+import Library
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ZStack {
+                AngularGradient(colors: [.blue, .green, .yellow], center:.zero)
+                    .ignoresSafeArea()
+                VStack{
+                    ForEach(1..<11, id: \.self) { _ in
+                        EntryRow()
+                    }
+                }
+            }
+        }
     }
 }
 
